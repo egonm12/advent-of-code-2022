@@ -64,4 +64,15 @@ void main() {
 
     expect(await crateMover9000(input, instructions), 'CMZ');
   });
+
+  test(crateMover9001, () async {
+    final Map<int, List<String>> input = {
+      1: ['Z', 'N'],
+      2: ['M', 'C', 'D'],
+      3: ['P'],
+    };
+    final instructions = await parseInstructions('test/data/day_05.txt');
+
+    expect(await crateMover9001(input, instructions), 'MCD');
+  });
 }
